@@ -5,8 +5,8 @@
       <h1>轱辘UI</h1>
       <h2>一个Vue3 UI框架</h2>
       <p class="actions">
-        <a href>GitHub</a>
-        <a href>开始</a>
+        <a href="https://github.com/kinderzyc/Vite-UI">GitHub</a>
+       <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
