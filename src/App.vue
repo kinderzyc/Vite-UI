@@ -4,8 +4,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { ref, provide } from "vue";
 export default {
-  name: "App"
+  name: "App",
+  setup() {
+    const width = document.documentElement.clientWidth;
+    const asideVisible = ref(width <= 500 ? false : true);
+    provide("xxx", asideVisible); //set
+  }
 };
 </script>
