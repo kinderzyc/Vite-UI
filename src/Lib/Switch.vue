@@ -38,7 +38,7 @@ button {
     width: $h2;
     background: white;
     border-radius: $h2/2;
-    transition: left 500ms;
+    transition: left 400ms;
   }
   &:focus {
     outline: none;
