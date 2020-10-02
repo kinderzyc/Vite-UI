@@ -1,21 +1,23 @@
 <template>
-  <template v-if="visiable">
-    <div class="gulu-dialog-overlay" @click="OnClickOverlay"></div>
-    <div class="gulu-dialog-wrapper">
-      <div class="gulu-dialog">
-        <header>
-          <slot name="title" />
-          <span @click="close" class="gulu-dialog-close"></span>
-        </header>
-        <main>
-          <slot name="content" />
-        </main>
-        <footer>
-          <Button @click="ok">Ok</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+  <template v-if="visible">
+    <Teleport to="body">
+      <div class="gulu-dialog-overlay" @click="OnClickOverlay"></div>
+      <div class="gulu-dialog-wrapper">
+        <div class="gulu-dialog">
+          <header>
+            <slot name="title" />
+            <span @click="close" class="gulu-dialog-close"></span>
+          </header>
+          <main>
+            <slot name="content" />
+          </main>
+          <footer>
+            <Button @click="ok">Ok</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
@@ -24,7 +26,7 @@
 import Button from "../Lib/Button.vue";
 export default {
   props: {
-    visiable: {
+    visible: {
       type: Boolean,
       default: false
     },
@@ -42,7 +44,7 @@ export default {
   components: { Button },
   setup(props, context) {
     const close = () => {
-      context.emit("update:visiable", false);
+      context.emit("update:visible", false);
     };
     const OnClickOverlay = () => {
       if (props.closeOnClickOverlay) {
@@ -56,7 +58,7 @@ export default {
       }
     };
     const cancel = () => {
-      context.emit("cancel");
+      props.cancel?.(); //porps.cancel && props.cancel()
       close();
     };
     return { close, OnClickOverlay, ok, cancel };
