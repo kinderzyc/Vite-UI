@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe D:\Yarn\bin\yarn.js add github-markdown-css
+  C:\Program Files\nodejs\node.exe D:\Yarn\bin\yarn.js add prismjs
 
 PATH: 
-  E:\Git bash\Git\mingw64\bin;E:\Git bash\Git\usr\bin;C:\Users\DELL\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;D:\Yarn\bin;C:\Users\DELL\AppData\Local\Yarn\bin;C:\Users\DELL\AppData\Roaming\npm;C:\Users\DELL\AppData\Local\Microsoft\WindowsApps;C:\Users\DELL\AppData\Local\Programs\Microsoft VS Code\bin
+  E:\Git bash\Git\mingw64\bin;E:\Git bash\Git\usr\bin;C:\Users\DELL\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;D:\Yarn\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\DELL\AppData\Local\Yarn\bin;C:\Users\DELL\AppData\Roaming\npm;C:\Users\DELL\AppData\Local\Microsoft\WindowsApps;C:\Users\DELL\AppData\Local\Programs\Microsoft VS Code\bin;E:\npm\gobal;E:\yarn\global
 
 Yarn version: 
   1.22.4
@@ -25,11 +25,13 @@ npm manifest:
       "build": "vite build"
     },
     "dependencies": {
+      "github-markdown-css": "^4.0.0",
       "vue": "^3.0.0-rc.1",
       "vue-router": "4.0.0-beta.9"
     },
     "devDependencies": {
       "@vue/compiler-sfc": "^3.0.0-rc.1",
+      "marked": "^1.2.2",
       "sass": "1.26.10",
       "vite": "^1.0.0-rc.1"
     }
@@ -921,6 +923,11 @@ Lockfile:
     dependencies:
       pump "^3.0.0"
   
+  github-markdown-css@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.npm.taobao.org/github-markdown-css/download/github-markdown-css-4.0.0.tgz#be9f4caf7a389228d4c368336260ffc909061f35"
+    integrity sha1-vp9Mr3o4kijUw2gzYmD/yQkGHzU=
+  
   glob-parent@^5.1.0, glob-parent@~5.1.0:
     version "5.1.1"
     resolved "https://registry.npm.taobao.org/glob-parent/download/glob-parent-5.1.1.tgz#b6c1ef417c4e5663ea498f1c45afac6916bbc229"
@@ -1366,6 +1373,11 @@ Lockfile:
     integrity sha1-P0l9b9NMZpxnmNy4IfLvMfVEUFE=
     dependencies:
       sourcemap-codec "^1.4.4"
+  
+  marked@^1.2.2:
+    version "1.2.2"
+    resolved "https://registry.npm.taobao.org/marked/download/marked-1.2.2.tgz?cache=0&sync_timestamp=1603293055092&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmarked%2Fdownload%2Fmarked-1.2.2.tgz#5d77ffb789c4cb0ae828bfe76250f7140b123f70"
+    integrity sha1-XXf/t4nEywroKL/nYlD3FAsSP3A=
   
   media-typer@0.3.0:
     version "0.3.0"
