@@ -1,5 +1,5 @@
- <demo>
- 常规用法
+<demo>
+常规用法
 </demo>
 
 <template>
@@ -7,13 +7,18 @@
 </template>
 
 <script lang="ts">
-import Switch from "../Lib/Switch.vue";
+import  Switch  from "../Lib/Switch.vue";
 import { ref } from "vue";
 export default {
-  components: { Switch },
+  components: {
+    Switch
+  },
   setup() {
     const bool = ref(false);
-    return { bool };
+    return {
+      bool
+    };
   }
 };
 </script>
+
