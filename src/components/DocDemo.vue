@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <h1>
         Doc 默认页面
-    </div>
+    </h1>
 </template>
 
 <script lang="ts">
