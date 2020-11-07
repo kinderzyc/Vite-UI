@@ -2,7 +2,6 @@
   <button class="gulu-switch" @click="toggle" :class="{'gulu-checked':value}">
     <span></span>
   </button>
-  <!-- <div>{{value}}</div> -->
 </template>
 
 <script lang="ts">
